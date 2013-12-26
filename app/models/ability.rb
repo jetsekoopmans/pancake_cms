@@ -8,7 +8,7 @@ class Ability
       if user.role == "superadmin"
         can :manage, :all             # allow superadmins to do anything
       elsif 
-        # DO NOTHING
+        cannot :manage, :all
       end
     end
   end
