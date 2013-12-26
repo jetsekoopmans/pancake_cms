@@ -8,7 +8,7 @@ class Ability
       if user.role == "superadmin"
         can :manage, :all             # allow superadmins to do anything
       elsif 
-        cannot :manage, :all
+        can :dashboard                  # allow access to dashboard
       end
     end
   end
