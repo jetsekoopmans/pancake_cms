@@ -6,6 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :metadata
       t.string :menu
       t.integer :position, :default => 0
+      t.string :template, :default => '_default.html.erb'
       t.text :content
 
       t.timestamps

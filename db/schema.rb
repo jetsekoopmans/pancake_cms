@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20131227170711) do
     t.string   "metadata"
     t.string   "menu"
     t.integer  "position",   default: 0
+    t.string   "template",   default: "_default.html.erb"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
