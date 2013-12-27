@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226163135) do
+ActiveRecord::Schema.define(version: 20131227143823) do
+
+  create_table "pages", force: true do |t|
+    t.string "title"
+    t.text   "content"
+  end
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
