@@ -1,5 +1,7 @@
 PancakeCms::Application.routes.draw do
-  get "pages/index"
+  match '/pages/:url',  to: 'pages#index',            via: 'get'
+
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
