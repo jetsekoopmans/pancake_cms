@@ -48,3 +48,7 @@ end
 gem 'rails_admin'
 gem "devise"
 gem "cancan"
+gem 'ckeditor'
+gem 'paperclip', '3.4.0'
+gem 'rmagick'
+

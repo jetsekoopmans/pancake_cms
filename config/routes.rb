@@ -1,4 +1,5 @@
 PancakeCms::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   match '/pages/:url',  to: 'pages#index',            via: 'get'
 
 
