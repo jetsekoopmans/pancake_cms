@@ -8,7 +8,6 @@ class CreatePages < ActiveRecord::Migration
       t.string :menu
       t.integer :position, :default => 0
       t.string :template, :default => 'default'
-      t.text :contents
 
       t.timestamps
     end
