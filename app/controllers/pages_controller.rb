@@ -5,7 +5,6 @@ class PagesController < ApplicationController
   	@page = Pages.find_by(url: params[:url])
   	@title = @page.title
   	@content = ERB.new(Pages.first.content).result.html_safe
-  	@default = 'default'
-  	@template = 'templates/' + @default
+  	@template = 'templates/' + @page.template
   end
 end
