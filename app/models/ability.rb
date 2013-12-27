@@ -6,7 +6,7 @@ class Ability
       can :manage, :all               
 
       if user.role != "superadmin"
-        cannot :manage, [User]            
+        cannot :manage, [User]
 
       end
     end
