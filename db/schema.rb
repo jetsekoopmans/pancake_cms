@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227150617) do
+ActiveRecord::Schema.define(version: 20131227170711) do
 
   create_table "pages", force: true do |t|
     t.string   "title"
+    t.string   "url"
+    t.string   "metadata"
+    t.string   "menu"
+    t.integer  "position",   default: 0
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"

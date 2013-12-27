@@ -3,12 +3,11 @@ class Ability
 
   def initialize(user)
     if user
-      can :access, :rails_admin       # only allow admin users to access Rails Admin
-      can :dashboard                  # allow access to dashboard
-      if user.role == "superadmin"
-        can :manage, :all             # allow superadmins to do anything
-      elsif 
-        can :dashboard                  # allow access to dashboard
+      can :manage, :all               
+
+      if user.role != "superadmin"
+        cannot :manage, [User]            
+
       end
     end
   end

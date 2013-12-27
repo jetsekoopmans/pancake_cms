@@ -2,8 +2,16 @@
 
 one:
   title: MyString
+  url: MyString
+  metadata: MyString
+  menu: MyString
+  position: 1
   content: MyText
 
 two:
   title: MyString
+  url: MyString
+  metadata: MyString
+  menu: MyString
+  position: 1
   content: MyText
