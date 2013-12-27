@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20131227205955) do
     t.string   "menu"
     t.integer  "position",         default: 0
     t.string   "template",         default: "default"
-    t.text     "content"
+    t.text     "contents"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
