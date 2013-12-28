@@ -1,0 +1,10 @@
+<% provide(:title, 'News') %>
+<% provide(:pages, @pages) %>
+
+
+<%= paginate @news %>
+<% @news.each do |news| %>
+<h1><%= link_to news.title, '/pages/news/' + news.url %></h1><h2><%= news.date.to_date.to_formatted_s(:long) %></h2>
+<p> <%= news.excerpt.html_safe %></p>
+<%= link_to 'Read more...', '/pages/news/' + news.url %>
+<% end %>

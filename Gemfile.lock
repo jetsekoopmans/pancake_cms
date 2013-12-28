@@ -171,6 +171,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   paperclip (= 3.4.0)
   rails (= 4.0.1)
   rails_admin
