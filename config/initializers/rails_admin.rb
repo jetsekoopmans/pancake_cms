@@ -5,8 +5,8 @@ RailsAdmin.config do |config|
 
   config.model Content do
     edit do
-      field :content, :ck_editor
       field :pages
+      field :content, :ck_editor
     end
   end
 
