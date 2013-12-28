@@ -5,13 +5,18 @@ RailsAdmin.config do |config|
 
   config.model Content do
     edit do
-      # For RailsAdmin >= 0.5.0
       field :content, :ck_editor
       field :pages
-      # For RailsAdmin < 0.5.0
-      # field :description do
-      #   ckeditor true
-      # end
+    end
+  end
+
+  config.model News do
+    edit do
+      field :title
+      field :url
+      field :date
+      field :excerpt
+      field :content, :ck_editor
     end
   end
   ################  Global configuration  ################
