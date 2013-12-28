@@ -19,6 +19,24 @@ RailsAdmin.config do |config|
       field :content, :ck_editor
     end
   end
+
+  config.actions do
+    # root actions
+    dashboard
+    # collection actions 
+    index
+    new
+    #export
+    #history_index
+    bulk_delete
+    
+    # member actions
+    show
+    edit
+    delete
+    #history_show
+    show_in_app
+  end
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
