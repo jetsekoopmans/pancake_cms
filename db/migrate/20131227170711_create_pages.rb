@@ -2,7 +2,7 @@ class CreatePages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
       t.string :title
-      t.string :url
+      t.string :url, :unique => true
       t.string :meta_description
       t.string :meta_keywords
       t.string :menu
