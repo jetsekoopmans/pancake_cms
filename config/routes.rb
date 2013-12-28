@@ -1,6 +1,9 @@
 PancakeCms::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  match '/pages/news',  to: 'news#index',            via: 'get'
   match '/pages/:url',  to: 'pages#index',            via: 'get'
+  match 'pages/news/:url',  to: 'news#show',            via: 'get'
+  match 'pages/news',  to: 'news#index',            via: 'get'
   root :to => 'pages#index'
 
   devise_for :users

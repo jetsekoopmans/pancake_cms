@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   def index
   	@pages = Pages.all(:order => 'position')
   	
-  	if @page = Pages.find_by(url: params[:url]) 
+  	if @page = Pages.find_by(url: params[:url])
+    elsif @page = Pages.find_by(url: 'home')
     else @page = Pages.first
     end
 		
