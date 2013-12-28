@@ -1,7 +1,7 @@
 PancakeCms::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   match '/pages/:url',  to: 'pages#index',            via: 'get'
-
+  root :to => 'pages#index'
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
