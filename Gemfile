@@ -53,4 +53,5 @@ gem "cancan"
 gem 'ckeditor'
 gem 'paperclip', '3.4.0'
 gem 'rmagick'
-
+gem 'rails_admin_nestable'
+gem 'ancestry'

@@ -36,6 +36,23 @@ RailsAdmin.config do |config|
     delete
     #history_show
     show_in_app
+
+    # Add the nestable action for configured models
+    nestable
+  end
+
+  config.model Pages do
+    nestable_tree({
+      position_field: :position,
+      max_depth: 3
+    })
+  end
+
+  config.model Content do
+    nestable_tree({
+      position_field: :position,
+      max_depth: 3
+    })
   end
   ################  Global configuration  ################
 

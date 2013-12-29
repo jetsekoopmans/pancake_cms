@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228105545) do
+ActiveRecord::Schema.define(version: 20131229115531) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20131228105545) do
     t.integer  "pages_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ancestry",   default: "0"
+    t.integer  "position"
   end
 
   create_table "news", force: true do |t|
@@ -56,6 +58,7 @@ ActiveRecord::Schema.define(version: 20131228105545) do
     t.string   "template",         default: "default"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ancestry",         default: "0"
   end
 
   create_table "rails_admin_histories", force: true do |t|
