@@ -44,7 +44,7 @@ RailsAdmin.config do |config|
   config.model Pages do
     nestable_tree({
       position_field: :position,
-      max_depth: 3
+      max_depth: 2
     })
   end
 
