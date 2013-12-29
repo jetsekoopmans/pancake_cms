@@ -4,6 +4,7 @@
 RailsAdmin.config do |config|
 
   config.model Content do
+    parent Pages
     edit do
       field :pages
       field :content, :ck_editor
@@ -12,6 +13,7 @@ RailsAdmin.config do |config|
       exclude_fields :id
     end
   end
+
 
   config.model News do
     edit do
@@ -27,6 +29,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Contact do
+    label "Contactform" 
+    label_plural "Contactform"
     list do
       exclude_fields :id
     end

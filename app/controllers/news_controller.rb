@@ -6,7 +6,7 @@ class NewsController < ApplicationController
     #@news = News.paginate(page: params[:page], :per_page => 3, :order => 'date DESC' )
   end
   def show
-  	@pages = Pages.all(:order => 'position')
+  	@pages = Pages.where(ancestry: nil && '0' ).order(position: :asc)
   	@news = News.find_by(url: params[:url]) 
   	@title = @news.title
   	@date = @news.date.to_date.to_formatted_s(:long_ordinal)
