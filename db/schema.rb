@@ -31,12 +31,13 @@ ActiveRecord::Schema.define(version: 20131229135548) do
 
   create_table "contacts", force: true do |t|
     t.string   "email"
+    t.text     "response"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "contents", force: true do |t|
-    t.string   "content"
+    t.text     "content"
     t.integer  "pages_id"
     t.datetime "created_at"
     t.datetime "updated_at"
