@@ -48,12 +48,6 @@ RailsAdmin.config do |config|
     })
   end
 
-  config.model Content do
-    nestable_tree({
-      position_field: :position,
-      max_depth: 3
-    })
-  end
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
