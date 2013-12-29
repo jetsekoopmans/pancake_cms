@@ -6,8 +6,11 @@ PancakeCms::Application.routes.draw do
   match 'pages/news',  to: 'news#index',            via: 'get'
   root :to => 'pages#index'
 
+  get '/admin/contact/', to: redirect('/admin/contact/1/edit')
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
