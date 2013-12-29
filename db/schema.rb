@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229115531) do
+ActiveRecord::Schema.define(version: 20131229130329) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20131229115531) do
     t.integer  "pages_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ancestry",   default: "0"
     t.integer  "position"
   end
 
