@@ -6,7 +6,7 @@ PancakeCms::Application.routes.draw do
   match 'pages/news',  to: 'news#index',            via: 'get'
   root :to => 'pages#index'
 
-  get '/admin/contact/', to: redirect('/admin/contact/1/edit')
+  get '/admin/contact/', to: redirect('/admin/contact/1')
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
