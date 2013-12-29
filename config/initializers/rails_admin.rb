@@ -70,12 +70,6 @@ RailsAdmin.config do |config|
     nestable
   end
 
-  config.model Pages do
-    nestable_tree({
-      position_field: :position,
-      max_depth: 2
-    })
-  end
 
   ################  Global configuration  ################
 
