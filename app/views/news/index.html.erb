@@ -9,3 +9,4 @@
 	<p> <%= news.excerpt.html_safe %></p>
 	<%= news.content != "" ? (link_to 'Read more...', '/pages/news/' + news.url) : "" %>
 <% end %>
+

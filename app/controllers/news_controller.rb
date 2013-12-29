@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-  	@pages = Pages.all(:order => 'position')
+  	@pages = Pages.where(ancestry: nil && '0' ).order(position: :desc)
   	#@news = News.order(:date).page params[:page].per(3)
     @news = News.order("date desc").page( params[:page]).per(2)
     #@news = News.paginate(page: params[:page], :per_page => 3, :order => 'date DESC' )
