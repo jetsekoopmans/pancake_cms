@@ -8,6 +8,9 @@ RailsAdmin.config do |config|
       field :pages
       field :content, :ck_editor
     end
+    list do
+      exclude_fields :id
+    end
   end
 
   config.model News do
@@ -18,14 +21,38 @@ RailsAdmin.config do |config|
       field :excerpt
       field :content, :ck_editor
     end
+    list do
+      exclude_fields :id
+    end
   end
+
+  config.model Contact do
+    list do
+      exclude_fields :id
+    end
+  end
+
+  config.model Pages do
+    nestable_tree({
+      position_field: :position,
+      max_depth: 3
+    })
+    list do
+      exclude_fields :id
+    end
+  end
+
 
   config.actions do
     # root actions
     dashboard
     # collection actions 
-    index
-    new
+    index do
+      except ['Contact']
+    end
+    new do
+      except ['Contact']
+    end
     #export
     #history_index
     bulk_delete
@@ -33,7 +60,9 @@ RailsAdmin.config do |config|
     # member actions
     show
     edit
-    delete
+    delete do
+      except ['Contact']
+    end
     #history_show
     show_in_app
 
@@ -41,12 +70,16 @@ RailsAdmin.config do |config|
     nestable
   end
 
+<<<<<<< HEAD
   config.model Pages do
     nestable_tree({
       position_field: :position,
       max_depth: 2
     })
   end
+=======
+
+>>>>>>> contact
 
   ################  Global configuration  ################
 
