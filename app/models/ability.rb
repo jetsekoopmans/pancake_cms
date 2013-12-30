@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     if user
-      can :manage, :all               
+      can :manage, :all
 
       if user.role != "superadmin"
         cannot :manage, [User]

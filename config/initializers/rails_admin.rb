@@ -13,7 +13,7 @@ RailsAdmin.config do |config|
       exclude_fields :id
     end
   end
-
+  
 
   config.model News do
     weight -1
