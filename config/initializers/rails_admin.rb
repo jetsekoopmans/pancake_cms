@@ -37,6 +37,14 @@ RailsAdmin.config do |config|
   end
 
   config.model Pages do
+    edit do
+      field :title
+      field :url
+      field :meta_description
+      field :meta_keywords
+      field :menu
+      field :template
+    end
     nestable_tree({
       position_field: :position,
       max_depth: 2

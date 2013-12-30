@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20131229135548) do
     t.integer  "pages_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "position"
   end
 
   create_table "news", force: true do |t|
@@ -60,11 +59,11 @@ ActiveRecord::Schema.define(version: 20131229135548) do
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.string   "menu"
-    t.integer  "position",         default: 0
+    t.integer  "position"
     t.string   "template",         default: "default"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ancestry",         default: "0"
+    t.string   "ancestry"
   end
 
   create_table "rails_admin_histories", force: true do |t|

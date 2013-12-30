@@ -6,7 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :meta_description
       t.string :meta_keywords
       t.string :menu
-      t.integer :position, :default => 0
+      t.integer :position, :default => nil
       t.string :template, :default => 'default'
 
       t.timestamps
