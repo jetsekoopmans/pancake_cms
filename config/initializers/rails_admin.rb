@@ -16,6 +16,8 @@ RailsAdmin.config do |config|
 
 
   config.model News do
+    weight -1
+    navigation_label 'Content'
     edit do
       field :title
       field :url
@@ -28,8 +30,14 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model User do
+    navigation_label 'Settings'
+  end
+
   config.model Contact do
-    label "Contactf Response" 
+    weight +1
+    navigation_label 'Settings'
+    label "Contact Response" 
     label_plural "Contact Response"
     list do
       exclude_fields :id
@@ -37,6 +45,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Pages do
+    navigation_label 'Content'
     edit do
       field :title
       field :url
