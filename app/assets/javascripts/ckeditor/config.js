@@ -1,6 +1,7 @@
 if(typeof(CKEDITOR) != 'undefined')
 {
   CKEDITOR.editorConfig = function(config) {
+    config.title = "asdasd";
     config.uiColor = "#f5f5f5";
     config.toolbar = [
           ['Format','Font','FontSize'],
