@@ -7,7 +7,8 @@ namespace :db do
                  role: "superadmin")
     Contact.create!(name: "Pan Cake",
                     email: "info@pancake.nl",
-                    response: "This is the response")
+                    response_subject: "This is the response subject",
+                    response_message: "This is the response message")
     Pages.create!(title: "Home",
                   url: "home",
                   meta_description: "This is the home page",
