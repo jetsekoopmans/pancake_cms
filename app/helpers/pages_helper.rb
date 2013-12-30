@@ -1,7 +1,7 @@
 module PagesHelper
-  	def get_content(x)
-    	if @contents[x].present?
-	   		return @contents[x].content.html_safe
+  	def get_section(x)
+    	if @sectinos[x].present?
+	   		return @sectinos[x].content.html_safe
 		else
 			return ""
 		end

@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 20131229135548) do
   create_table "contacts", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "response"
+    t.string   "response_subject"
+    t.text     "response_message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

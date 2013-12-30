@@ -4,6 +4,8 @@
 RailsAdmin.config do |config|
 
   config.model Content do
+    label "Section" 
+    label_plural "Sections"
     parent Pages
     edit do
       field :pages
@@ -29,8 +31,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Contact do
-    label "Contactform" 
-    label_plural "Contactform"
+    label "Contactf Response" 
+    label_plural "Contact Response"
     list do
       exclude_fields :id
     end
