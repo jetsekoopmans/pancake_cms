@@ -1,9 +1,13 @@
 PancakeCms::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  match '/pages/contact',  to: 'forms#new',            via: 'get'
   match '/pages/news',  to: 'news#index',            via: 'get'
   match '/pages/:url',  to: 'pages#index',            via: 'get'
   match 'pages/news/:url',  to: 'news#show',            via: 'get'
   match 'pages/news',  to: 'news#index',            via: 'get'
+
+
+
   root :to => 'pages#index'
 
   get '/admin/contact/', to: redirect('/admin/contact/1')

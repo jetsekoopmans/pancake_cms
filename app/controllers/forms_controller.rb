@@ -1,10 +1,12 @@
 class FormsController < ApplicationController
   def new
+    @pages = Pages.where(ancestry: nil).order(position: :asc)
     @form = Form.new
     @form2 = Form2.new
   end
 
   def create
+    @pages = Pages.where(ancestry: nil).order(position: :asc)
     @form = Form.new(params[:form])
     @form2 = Form2.new(params[:form])
     @form.request = request

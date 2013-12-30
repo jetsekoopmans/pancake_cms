@@ -5,8 +5,9 @@ namespace :db do
                  password: "pancake123",
                  password_confirmation: "pancake123",
                  role: "superadmin")
-    Contact.create!(email: "info@pancake.nl",
-                 response: "This is the response")
+    Contact.create!(name: "Pan Cake",
+                    email: "info@pancake.nl",
+                    response: "This is the response")
     Pages.create!(title: "Home",
                   url: "home",
                   meta_description: "This is the home page",
