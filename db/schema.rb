@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20131229135548) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
   create_table "contacts", force: true do |t|
+    t.string   "name"
     t.string   "email"
     t.text     "response"
     t.datetime "created_at"

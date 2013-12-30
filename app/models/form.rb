@@ -4,6 +4,7 @@ class Form < MailForm::Base
   attribute :email,     :validate => Devise.email_regexp
   attribute :message
   #attribute :nickname,  :captcha  => true
+  #@response = Contact.first.response
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
@@ -12,7 +13,7 @@ class Form < MailForm::Base
       :subject => "Contact",
       :to => %("#{email}"),
       #:from => "AJ ICT"
-      :body => %("Thank you for your message. We'll get back to you soon.")
+      :body => Contact.first.response 
     }
   end
 end
@@ -29,9 +30,9 @@ class Form2 < MailForm::Base
   def headers
     {
       :subject => "Contact",
-      :to => "jetse_snoep@hotmail.com",
-      :body => %("#{message}")
-      #:from => "AJ ICT"
+      :to => Contact.first.email,
+      :body => %(#{message}),
+      :from => %("#{email}")
     }
   end
 end
