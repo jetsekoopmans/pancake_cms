@@ -35,7 +35,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Contact do
-    weight +1
+    weight 0
     navigation_label 'Settings'
     label "Contact Response" 
     label_plural "Contact Response"
