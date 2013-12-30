@@ -1,8 +1,8 @@
 # Mail from admin to customer
 class Form < MailForm::Base
   attribute :name,      :validate => true
-  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
+  attribute :subject,   :validate => true
   attribute :message
   #attribute :nickname,  :captcha  => true
   #@response = Contact.first.response
@@ -14,7 +14,8 @@ class Form < MailForm::Base
       :subject => Contact.first.response_subject,
       :to => %("#{email}"),
       :from => Contact.first.name,
-      :body => Contact.first.response_message
+      :body => Contact.first.response_message.html_safe,
+      content_type: "text/html"
     }
   end
 end
@@ -22,8 +23,8 @@ end
 # Confirmation mail to admin
 class Form2 < MailForm::Base
   attribute :name,      :validate => true
-  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
+  attribute :subject,   :validate => true
   attribute :message
   #attribute :nickname,  :captcha  => true
 
