@@ -1,6 +1,7 @@
 # Mail from admin to customer
 class Form < MailForm::Base
   attribute :name,      :validate => true
+  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
   attribute :message
   #attribute :nickname,  :captcha  => true
@@ -10,10 +11,10 @@ class Form < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Contact",
+      :subject => Contact.first.response_subject,
       :to => %("#{email}"),
-      #:from => "AJ ICT"
-      :body => Contact.first.response 
+      :from => Contact.first.name,
+      :body => Contact.first.response_message
     }
   end
 end
@@ -21,6 +22,7 @@ end
 # Confirmation mail to admin
 class Form2 < MailForm::Base
   attribute :name,      :validate => true
+  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
   attribute :message
   #attribute :nickname,  :captcha  => true
@@ -29,7 +31,7 @@ class Form2 < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Contact",
+      :subject => %(#{subject}),
       :to => Contact.first.email,
       :body => %(#{message}),
       :from => %("#{email}")
