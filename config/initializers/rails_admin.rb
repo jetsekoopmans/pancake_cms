@@ -45,6 +45,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Pages do
+    weight -2
     navigation_label 'Content'
     edit do
       field :title
