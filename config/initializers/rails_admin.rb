@@ -44,6 +44,7 @@ RailsAdmin.config do |config|
       field :meta_keywords
       field :menu
       field :template
+      field :content
     end
     nestable_tree({
       position_field: :position,

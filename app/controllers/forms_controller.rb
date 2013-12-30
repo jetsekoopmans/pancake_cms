@@ -1,12 +1,16 @@
 class FormsController < ApplicationController
   def new
     @form = Form.new
+    @form2 = Form2.new
   end
 
   def create
     @form = Form.new(params[:form])
+    @form2 = Form2.new(params[:form])
     @form.request = request
-    if @form.deliver
+    @form2.request = request
+
+    if @form.deliver and @form2.deliver
       flash.now[:error] = nil
       flash.now[:notice] = 'Thank you for your message!'
     else
