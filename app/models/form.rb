@@ -1,8 +1,8 @@
 # Mail from admin to customer
 class Form < MailForm::Base
   attribute :name,      :validate => true
-  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
+  attribute :subject,   :validate => true
   attribute :message
   #attribute :nickname,  :captcha  => true
   #@response = Contact.first.response
@@ -22,8 +22,8 @@ end
 # Confirmation mail to admin
 class Form2 < MailForm::Base
   attribute :name,      :validate => true
-  attribute :subject,   :validate => true
   attribute :email,     :validate => Devise.email_regexp
+  attribute :subject,   :validate => true
   attribute :message
   #attribute :nickname,  :captcha  => true
 
