@@ -1,6 +1,6 @@
-class CreateContents < ActiveRecord::Migration
+class CreateSections < ActiveRecord::Migration
   def change
-    create_table :contents do |t|
+    create_table :sections do |t|
       t.text :content
       t.integer :pages_id
 

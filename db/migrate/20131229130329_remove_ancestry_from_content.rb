@@ -1,5 +1,5 @@
-class RemoveAncestryFromContent < ActiveRecord::Migration
+class RemoveAncestryFromSection < ActiveRecord::Migration
   def change
-    remove_column :contents, :ancestry, :string
+    remove_column :sections, :ancestry, :string
   end
 end
