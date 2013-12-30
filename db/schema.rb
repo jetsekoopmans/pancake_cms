@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229135548) do
+ActiveRecord::Schema.define(version: 20131230144033) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -34,13 +34,6 @@ ActiveRecord::Schema.define(version: 20131229135548) do
     t.string   "email"
     t.string   "response_subject"
     t.text     "response_message"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contents", force: true do |t|
-    t.text     "content"
-    t.integer  "pages_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,6 +73,13 @@ ActiveRecord::Schema.define(version: 20131229135548) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
+
+  create_table "sections", force: true do |t|
+    t.text     "content"
+    t.integer  "pages_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -3,9 +3,7 @@
 
 RailsAdmin.config do |config|
 
-  config.model Content do
-    label "Section" 
-    label_plural "Sections"
+  config.model Section do
     parent Pages
     edit do
       field :pages
@@ -46,7 +44,7 @@ RailsAdmin.config do |config|
       field :meta_keywords
       field :menu
       field :template
-      field :content
+      field :section
     end
     nestable_tree({
       position_field: :position,
