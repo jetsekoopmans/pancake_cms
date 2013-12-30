@@ -31,6 +31,12 @@ RailsAdmin.config do |config|
   config.model Contact do
     label "Contactform" 
     label_plural "Contactform"
+    edit do
+      field :name
+      field :email
+      field :response_subject
+      field :response_message, :ck_editor
+    end
     list do
       exclude_fields :id
     end

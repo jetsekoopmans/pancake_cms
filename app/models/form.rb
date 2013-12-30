@@ -14,7 +14,8 @@ class Form < MailForm::Base
       :subject => Contact.first.response_subject,
       :to => %("#{email}"),
       :from => Contact.first.name,
-      :body => Contact.first.response_message
+      :body => Contact.first.response_message.html_safe,
+      content_type: "text/html"
     }
   end
 end
