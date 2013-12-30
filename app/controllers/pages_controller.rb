@@ -12,6 +12,6 @@ class PagesController < ApplicationController
 		@meta_description = @page.meta_description
 		@meta_keywords = @page.meta_keywords
 		@template = 'templates/' + @page.template
-		@contents = Section.where(pages_id: @page.id)
+		@sections = Section.where(pages_id: @page.id)
   end
 end
