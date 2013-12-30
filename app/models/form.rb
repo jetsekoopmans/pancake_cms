@@ -12,6 +12,7 @@ class Form < MailForm::Base
       :subject => "Contact",
       :to => %("#{email}"),
       #:from => "AJ ICT"
+      :body => %("Thank you for your message. We'll get back to you soon.")
     }
   end
 end
@@ -28,7 +29,8 @@ class Form2 < MailForm::Base
   def headers
     {
       :subject => "Contact",
-      :to => "jetse_snoep@hotmail.com"
+      :to => "jetse_snoep@hotmail.com",
+      :body => %("#{message}")
       #:from => "AJ ICT"
     }
   end
