@@ -38,13 +38,6 @@ ActiveRecord::Schema.define(version: 20131230144033) do
     t.datetime "updated_at"
   end
 
-  create_table "contents", force: true do |t|
-    t.text     "content"
-    t.integer  "pages_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "news", force: true do |t|
     t.string   "title"
     t.string   "url"

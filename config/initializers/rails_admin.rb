@@ -39,6 +39,12 @@ RailsAdmin.config do |config|
     navigation_label 'Settings'
     label "Contact Response" 
     label_plural "Contact Response"
+    edit do
+      field :name
+      field :email
+      field :response_subject
+      field :response_message, :ck_editor
+    end
     list do
       exclude_fields :id
     end
