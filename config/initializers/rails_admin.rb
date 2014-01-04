@@ -14,6 +14,19 @@ RailsAdmin.config do |config|
     end
   end
   
+  config.model Photo do
+    edit do
+      field :caption
+      field :file, :paperclip
+      field :album
+    end
+  end
+
+  config.model Album do
+    edit do
+      field :title
+    end
+  end
 
   config.model News do
     weight -1
@@ -81,6 +94,12 @@ RailsAdmin.config do |config|
     end
     new do
       except ['Contact']
+    end
+    #multiple_upload do
+    #  only Album
+    #end
+    multiple_upload do
+      only Photo
     end
     #export
     #history_index

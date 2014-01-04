@@ -1,3 +1,9 @@
+PATH
+  remote: rails_admin_multiple_upload
+  specs:
+    rails_admin_multiple_upload (0.0.1)
+      rails (~> 4.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,6 +205,7 @@ DEPENDENCIES
   paperclip (= 3.4.0)
   rails (= 4.0.1)
   rails_admin
+  rails_admin_multiple_upload!
   rails_admin_nestable
   rmagick
   sass-rails (~> 4.0.0)
