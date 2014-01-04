@@ -1,7 +1,7 @@
 = simple_form_for(rails_admin.multiple_upload_url(id: @abstract_model.to_param), html: { multipart: true }) do |f|
-  = f.input :album_id, :as => :select, :include_blank => false, :collection => Album.all, input_html: {name: "album_id"}
-
-  %br
+  = f.input :album_id, :required => false, :as => :select, :include_blank => false, :collection => Album.all, input_html: {class: "test", name: "album_id"}
+  %br 
+  File
   = file_field_tag('album_photos_file', multiple: true, name: "album[photos_attributes][][file]")
   %br
   %br
